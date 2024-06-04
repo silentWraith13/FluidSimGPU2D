@@ -195,6 +195,7 @@ void App::BeginFrame()
 	g_theWindow->BeginFrame();
 	g_theRenderer->BeginFrame();
 	g_theJobSystem->BeginFrame();
+	
 	ImGui_ImplDX11_NewFrame();
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
