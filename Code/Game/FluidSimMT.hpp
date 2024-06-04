@@ -37,13 +37,14 @@ class FluidSimMT
 {
 public:
 	FluidSimMT(); //Constructor
-	~FluidSimMT(); //Destrcutor
+	~FluidSimMT(); //Destructor
 
 	//Basic Frame work
 	void				 Startup(unsigned int numParticles, InitialParticleConfigurationCPU initialParticleConfig);
 	void				 Render();
 	void				 Update(float deltaSeconds);
 	void				 InitializeWorldCamera();
+	void				 GetMouseCursorPos();
 	
 	//Particle functions
 	void				 RenderParticles();
@@ -72,8 +73,6 @@ public:
 	std::vector<Solver*> GetParticlesFromGrid(const Vec2& position);
 	void				 UpdateGrid();
 	std::vector<Solver*> FindNeighbors(Solver* particle) const;
-	
-	void				 GetMouseCursorPos();
 	
 	//ImGui
 	void				 ImGuiParticleSize();
